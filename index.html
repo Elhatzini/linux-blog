@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Linux στην Πράξη — πρακτικοί οδηγοί Linux, Bash, System Administration, Networking, Security και Troubleshooting.">
+<title>Linux στην Πράξη | Linux Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><span>🐧</span> Linux στην Πράξη</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Μενού">☰</button>
+    <nav id="mainNav">
+      <a href="index.html">Αρχική</a>
+      <a href="#categories">Κατηγορίες</a>
+      <a href="#articles">Άρθρα</a>
+      <a href="about.html">Σχετικά</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <button id="themeBtn" class="theme-btn" aria-label="Αλλαγή θέματος">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">LINUX • BASH • SERVERS • NETWORKING</div>
+      <h1>Linux στην <span>Πράξη.</span></h1>
+      <p>Πρακτικοί οδηγοί, παραδείγματα, Bash scripts και λύσεις προβλημάτων Linux — από τα βασικά μέχρι τη διαχείριση servers.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#articles">Δες τα άρθρα →</a>
+        <a class="btn secondary" href="about.html">Μάθε περισσότερα</a>
+      </div>
+    </div>
+    <div class="terminal">
+      <div class="terminal-top"><i></i><i></i><i></i><span>terminal</span></div>
+      <pre><code>$ whoami
+linux-admin
+$ uptime
+ 16:42 up 42 days,  3 users
+$ systemctl status ssh
+● ssh.service - OpenSSH Server
+   Active: <b>active (running)</b>
+
+$ echo "Learn. Build. Troubleshoot."
+Learn. Build. Troubleshoot. 🐧</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="container search-section">
+  <div class="search-box">
+    <span>⌕</span><input id="search" type="search" placeholder="Αναζήτησε άρθρο, εντολή ή θέμα..." aria-label="Αναζήτηση">
+  </div>
+</section>
+
+<section id="categories" class="container section">
+  <div class="section-head"><div><span class="eyebrow">EXPLORE</span><h2>Κατηγορίες</h2></div></div>
+  <div class="categories">
+    <a class="category" href="#articles" data-filter="Linux Basics"><b>🐧</b><strong>Linux Basics</strong><small>Βασικές εντολές & έννοιες</small></a>
+    <a class="category" href="#articles" data-filter="Bash"><b>⌨️</b><strong>Bash & Scripting</strong><small>Scripts & αυτοματισμοί</small></a>
+    <a class="category" href="#articles" data-filter="Administration"><b>⚙️</b><strong>System Administration</strong><small>Users, services & logs</small></a>
+    <a class="category" href="#articles" data-filter="Networking"><b>🌐</b><strong>Networking</strong><small>Δίκτυα, SSH & DNS</small></a>
+    <a class="category" href="#articles" data-filter="Security"><b>🔐</b><strong>Security & Backup</strong><small>Ασφάλεια & αντίγραφα</small></a>
+    <a class="category" href="#articles" data-filter="Monitoring"><b>📊</b><strong>Monitoring</strong><small>CPU, RAM, Disk & alerts</small></a>
+  </div>
+</section>
+
+<section id="articles" class="container section">
+  <div class="section-head"><div><span class="eyebrow">LATEST</span><h2>Τελευταία άρθρα</h2></div><span id="resultCount" class="muted"></span></div>
+  <div id="articleGrid" class="article-grid">
+<article class="article-card" data-category="Linux Basics" data-title="10 βασικές εντολές Linux">
+<div class="card-icon">🐧</div><span class="tag">Linux Basics</span><h3>10 βασικές εντολές Linux</h3><p>Οι εντολές που χρειάζεται να γνωρίζει κάθε νέος χρήστης Linux.</p>
+<a href="articles/linux-basics-commands.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Linux Basics" data-title="Η δομή αρχείων στο Linux">
+<div class="card-icon">🐧</div><span class="tag">Linux Basics</span><h3>Η δομή αρχείων στο Linux</h3><p>Τι σημαίνουν /, /home, /etc, /var, /tmp και /usr.</p>
+<a href="articles/linux-file-system.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Linux Basics" data-title="Εγκατάσταση Ubuntu Server βήμα-βήμα">
+<div class="card-icon">🐧</div><span class="tag">Linux Basics</span><h3>Εγκατάσταση Ubuntu Server βήμα-βήμα</h3><p>Ένας πρακτικός οδηγός για την πρώτη εγκατάσταση Ubuntu Server.</p>
+<a href="articles/linux-install-ubuntu.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Administration" data-title="Linux Permissions: chmod, chown και chgrp">
+<div class="card-icon">⚙️</div><span class="tag">Administration</span><h3>Linux Permissions: chmod, chown και chgrp</h3><p>Κατανόησε τα permissions και διαχειρίσου σωστά αρχεία και φακέλους.</p>
+<a href="articles/linux-permissions.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Administration" data-title="Users και Groups στο Linux">
+<div class="card-icon">⚙️</div><span class="tag">Administration</span><h3>Users και Groups στο Linux</h3><p>Δημιουργία, τροποποίηση και διαγραφή χρηστών και ομάδων.</p>
+<a href="articles/linux-users-groups.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Administration" data-title="systemctl: Διαχείριση υπηρεσιών">
+<div class="card-icon">⚙️</div><span class="tag">Administration</span><h3>systemctl: Διαχείριση υπηρεσιών</h3><p>Start, stop, restart, enable και έλεγχος systemd services.</p>
+<a href="articles/systemctl.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Administration" data-title="journalctl: Διάβασμα Linux logs">
+<div class="card-icon">⚙️</div><span class="tag">Administration</span><h3>journalctl: Διάβασμα Linux logs</h3><p>Πώς βρίσκουμε τι συνέβη σε ένα Linux σύστημα.</p>
+<a href="articles/journalctl.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Administration" data-title="Processes στο Linux">
+<div class="card-icon">⚙️</div><span class="tag">Administration</span><h3>Processes στο Linux</h3><p>Δες ποιες διεργασίες εκτελούνται και πώς τις ελέγχεις.</p>
+<a href="articles/linux-processes.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Bash" data-title="Bash Variables και βασική σύνταξη">
+<div class="card-icon">⌨️</div><span class="tag">Bash</span><h3>Bash Variables και βασική σύνταξη</h3><p>Οι πρώτες έννοιες για να γράψεις χρήσιμα Bash scripts.</p>
+<a href="articles/bash-variables.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Bash" data-title="if, for και while στο Bash">
+<div class="card-icon">⌨️</div><span class="tag">Bash</span><h3>if, for και while στο Bash</h3><p>Οι βασικές δομές ελέγχου για αυτοματισμούς.</p>
+<a href="articles/bash-if-loops.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Bash" data-title="Αυτόματο Backup με Bash και rsync">
+<div class="card-icon">⌨️</div><span class="tag">Bash</span><h3>Αυτόματο Backup με Bash και rsync</h3><p>Φτιάξε ένα απλό script για καθημερινό backup.</p>
+<a href="articles/bash-backup.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Bash" data-title="Cron Jobs: Αυτοματισμοί στο Linux">
+<div class="card-icon">⌨️</div><span class="tag">Bash</span><h3>Cron Jobs: Αυτοματισμοί στο Linux</h3><p>Πώς προγραμματίζουμε scripts να εκτελούνται αυτόματα.</p>
+<a href="articles/bash-cron.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Networking" data-title="SSH: Ασφαλής απομακρυσμένη πρόσβαση">
+<div class="card-icon">🌐</div><span class="tag">Networking</span><h3>SSH: Ασφαλής απομακρυσμένη πρόσβαση</h3><p>Σύνδεση σε Linux server και βασικές ρυθμίσεις.</p>
+<a href="articles/ssh-guide.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Networking" data-title="Βασικές εντολές δικτύου Linux">
+<div class="card-icon">🌐</div><span class="tag">Networking</span><h3>Βασικές εντολές δικτύου Linux</h3><p>Τα εργαλεία που χρησιμοποιούμε για network troubleshooting.</p>
+<a href="articles/linux-networking.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Networking" data-title="DNS Troubleshooting στο Linux">
+<div class="card-icon">🌐</div><span class="tag">Networking</span><h3>DNS Troubleshooting στο Linux</h3><p>Τι ελέγχουμε όταν ένα hostname δεν λύνει σωστά.</p>
+<a href="articles/linux-dns.html">Διάβασε το άρθρο →</a></article>
+
+<article class="article-card"
+         data-category="Networking"
+         data-title="Linux Network Troubleshooting">
+
+    <div class="card-icon">🌐</div>
+
+    <span class="tag">Networking</span>
+
+    <h3>Linux Network Troubleshooting</h3>
+
+    <p>
+        Πρακτικός οδηγός για troubleshooting προβλημάτων δικτύου
+        στο Linux.
+    </p>
+
+    <a href="articles/linux-network-troubleshooting.html">
+        Διάβασε το άρθρο →
+    </a>
+
+</article>
+<article class="article-card" data-category="Security" data-title="UFW Firewall στο Ubuntu">
+<div class="card-icon">🔐</div><span class="tag">Security</span><h3>UFW Firewall στο Ubuntu</h3><p>Βασική προστασία ενός Ubuntu server με UFW.</p>
+<a href="articles/linux-firewall-ufw.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Security" data-title="5 βασικά βήματα για ασφαλές SSH">
+<div class="card-icon">🔐</div><span class="tag">Security</span><h3>5 βασικά βήματα για ασφαλές SSH</h3><p>Πρακτικές ρυθμίσεις για να μειώσεις περιττούς κινδύνους.</p>
+<a href="articles/linux-ssh-security.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Monitoring" data-title="Έλεγχος CPU, RAM και Disk">
+<div class="card-icon">📊</div><span class="tag">Monitoring</span><h3>Έλεγχος CPU, RAM και Disk</h3><p>Γρήγορο troubleshooting πόρων Linux.</p>
+<a href="articles/linux-monitoring.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Monitoring" data-title="Prometheus και Node Exporter">
+<div class="card-icon">📊</div><span class="tag">Monitoring</span><h3>Prometheus και Node Exporter</h3><p>Ξεκίνησε monitoring Linux server με metrics.</p>
+<a href="articles/prometheus-node-exporter.html">Διάβασε το άρθρο →</a></article>
+<article class="article-card" data-category="Monitoring" data-title="Grafana για Linux Monitoring">
+<div class="card-icon">📊</div><span class="tag">Monitoring</span><h3>Grafana για Linux Monitoring</h3><p>Μετέτρεψε τα metrics σε χρήσιμα dashboards.</p>
+<a href="articles/grafana-linux-monitoring.html">Διάβασε το άρθρο →</a></article>
+  </div>
+  <div id="noResults" class="no-results" hidden>Δεν βρέθηκαν άρθρα.</div>
+</section>
+
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div><span class="eyebrow">STAY UPDATED</span><h2>Νέα άρθρα Linux</h2><p>Νέοι οδηγοί, scripts και πρακτικές λύσεις.</p></div>
+    <a class="btn primary" href="contact.html">Επικοινωνία →</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer-grid"><div><a class="logo" href="index.html">🐧 Linux στην Πράξη</a><p>Πρακτική γνώση Linux, χωρίς περιττή θεωρία.</p></div><div><h4>Περιεχόμενο</h4><a href="#articles">Άρθρα</a><a href="#categories">Κατηγορίες</a></div><div><h4>Blog</h4><a href="about.html">Σχετικά</a><a href="contact.html">Επικοινωνία</a></div></div><div class="container copyright">© 2026 Linux στην Πράξη · Built with HTML, CSS & JavaScript</div></footer>
+<script src="js/main.js"></script>
+</body></html>

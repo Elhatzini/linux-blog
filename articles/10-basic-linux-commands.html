@@ -1,0 +1,13 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="10 βασικές εντολές Linux που πρέπει να γνωρίζεις"><title>10 βασικές εντολές Linux που πρέπει να γνωρίζεις | Linux στην Πράξη</title><link rel="stylesheet" href="../css/style.css"></head><body><header class="site-header"><div class="container nav"><a class="logo" href="../index.html">🐧 Linux στην Πράξη</a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav"><a href="../index.html">Αρχική</a><a href="../index.html#categories">Κατηγορίες</a><a href="../index.html#articles">Άρθρα</a><a href="../about.html">Σχετικά</a><a href="../contact.html">Επικοινωνία</a><button id="themeBtn" class="theme-btn">🌙</button></nav></div></header><main class="article-page"><div class="article-content"><a class="back" href="../index.html#articles">← Όλα τα άρθρα</a><span class="tag">Linux Basics</span><h1>10 βασικές εντολές Linux που πρέπει να γνωρίζεις</h1><p class="lead">Ένα πρακτικό ξεκίνημα με τις εντολές που χρησιμοποιούμε καθημερινά.</p><h2>1. pwd — Πού βρίσκομαι;</h2><p>Εμφανίζει τον τρέχοντα φάκελο εργασίας.</p><pre>pwd</pre>
+<h2>2. ls — Τι υπάρχει στον φάκελο;</h2><pre>ls -lah</pre><p>Το <code>-l</code> δείχνει λεπτομέρειες και το <code>-a</code> περιλαμβάνει hidden files.</p>
+<h2>3. cd — Μετακίνηση</h2><pre>cd /var/log
+cd ..
+cd ~</pre>
+<h2>4. cp και 5. mv</h2><pre>cp file.txt backup.txt
+mv old.txt new.txt</pre>
+<h2>6. mkdir και 7. rm</h2><pre>mkdir projects
+rm file.txt
+rm -r old-folder</pre>
+<h2>8. cat</h2><pre>cat /etc/hostname</pre>
+<h2>9. grep</h2><pre>grep "error" /var/log/syslog</pre>
+<h2>10. sudo</h2><pre>sudo systemctl restart ssh</pre><p>Το <code>sudo</code> εκτελεί μια εντολή με δικαιώματα διαχειριστή, σύμφωνα με την πολιτική του συστήματος.</p></div></main><footer><div class="container copyright">© 2026 Linux στην Πράξη</div></footer><script src="../js/main.js"></script></body></html>

@@ -1,0 +1,19 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Μάθε τις βασικές δομές ελέγχου που μετατρέπουν απλές εντολές σε αυτοματισμούς."><title>if, for και while στο Bash | Linux στην Πράξη</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><header class="site-header"><div class="container nav"><a class="logo" href="../index.html">🐧 Linux στην Πράξη</a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav"><a href="../index.html">Αρχική</a><a href="../index.html#categories">Κατηγορίες</a><a href="../index.html#articles">Άρθρα</a><a href="../about.html">Σχετικά</a><a href="../contact.html">Επικοινωνία</a><button id="themeBtn" class="theme-btn">🌙</button></nav></div></header>
+<main class="article-page"><div class="article-content"><a class="back" href="../index.html#articles">← Όλα τα άρθρα</a><span class="tag">Bash</span><h1>if, for και while στο Bash</h1><p class="lead">Μάθε τις βασικές δομές ελέγχου που μετατρέπουν απλές εντολές σε αυτοματισμούς.</p>
+<h2>if</h2><p>Έλεγξε αν υπάρχει ένα αρχείο.</p><pre>if [ -f /etc/hostname ]; then
+  echo &quot;Υπάρχει&quot;
+else
+  echo &quot;Δεν υπάρχει&quot;
+fi</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Χρησιμοποίησε -f για κανονικό αρχείο και -d για directory.</p><h2>for</h2><p>Επανάλαβε μια ενέργεια για πολλά αρχεία.</p><pre>for file in *.log; do
+  echo &quot;$file&quot;
+done</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Τα quotes γύρω από το variable βοηθούν όταν filenames περιέχουν spaces.</p><h2>while</h2><p>Εκτέλεσε επαναληπτικά μια ενέργεια όσο ισχύει μια συνθήκη.</p><pre>COUNT=1
+while [ $COUNT -le 5 ]; do
+  echo $COUNT
+  COUNT=$((COUNT+1))
+done</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Πρόσεξε να υπάρχει συνθήκη που κάποτε γίνεται false.</p><h2>Πρακτική άσκηση</h2><p>Γράψε script που εμφανίζει όλα τα .log αρχεία ενός φακέλου και αναφέρει αν είναι άδεια.</p><pre>for f in /var/log/*.log; do
+  [ -f &quot;$f&quot; ] &amp;&amp; echo &quot;$f&quot;
+done</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Δοκίμασε πρώτα σε δικό σου test directory.</p><h2>Πρακτική άσκηση</h2><p>Δοκίμασε τις εντολές σε ένα test Linux σύστημα. Κατέγραψε τι άλλαξε πριν και μετά και κράτησε τις εντολές που αποδείχθηκαν χρήσιμες.</p>
+<h2>Συνηθισμένα λάθη</h2><ul><li>Εκτέλεση εντολών με <code>sudo</code> χωρίς έλεγχο.</li><li>Χρήση paths χωρίς να επιβεβαιωθεί ο προορισμός.</li><li>Αλλαγή ρυθμίσεων χωρίς backup ή τρόπο επαναφοράς.</li></ul>
+<h2>Checklist</h2><ol><li>Διάβασε την εντολή πριν την εκτελέσεις.</li><li>Έλεγξε το αποτέλεσμα.</li><li>Αν κάτι αποτύχει, δες logs και status.</li><li>Τεκμηρίωσε τη λύση.</li></ol></div></main><footer><div class="container copyright">© 2026 Linux στην Πράξη · Linux, Bash & System Administration</div></footer><script src="../js/main.js"></script></body></html>

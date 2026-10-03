@@ -1,0 +1,9 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bash Script: Αυτόματο Backup με rsync"><title>Bash Script: Αυτόματο Backup με rsync | Linux στην Πράξη</title><link rel="stylesheet" href="../css/style.css"></head><body><header class="site-header"><div class="container nav"><a class="logo" href="../index.html">🐧 Linux στην Πράξη</a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav"><a href="../index.html">Αρχική</a><a href="../index.html#categories">Κατηγορίες</a><a href="../index.html#articles">Άρθρα</a><a href="../about.html">Σχετικά</a><a href="../contact.html">Επικοινωνία</a><button id="themeBtn" class="theme-btn">🌙</button></nav></div></header><main class="article-page"><div class="article-content"><a class="back" href="../index.html#articles">← Όλα τα άρθρα</a><span class="tag">Bash</span><h1>Bash Script: Αυτόματο Backup με rsync</h1><p class="lead">Ένα απλό παράδειγμα για backup ενός φακέλου σε δεύτερο προορισμό.</p><h2>Το script</h2><pre>#!/bin/bash
+
+SOURCE="/home/user/data/"
+DEST="/backup/data/"
+
+rsync -av --delete "$SOURCE" "$DEST"
+
+echo "Backup completed: $(date)"</pre><h2>Εκτέλεση</h2><pre>chmod +x backup.sh
+./backup.sh</pre><p>Πριν χρησιμοποιήσεις το <code>--delete</code>, έλεγξε προσεκτικά source και destination, γιατί διαγράφει από τον προορισμό αρχεία που δεν υπάρχουν πλέον στην πηγή.</p></div></main><footer><div class="container copyright">© 2026 Linux στην Πράξη</div></footer><script src="../js/main.js"></script></body></html>

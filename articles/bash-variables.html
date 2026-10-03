@@ -1,0 +1,16 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ξεκίνα να γράφεις Bash scripts με μεταβλητές, arguments και exit codes."><title>Bash Variables και βασική σύνταξη | Linux στην Πράξη</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><header class="site-header"><div class="container nav"><a class="logo" href="../index.html">🐧 Linux στην Πράξη</a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav"><a href="../index.html">Αρχική</a><a href="../index.html#categories">Κατηγορίες</a><a href="../index.html#articles">Άρθρα</a><a href="../about.html">Σχετικά</a><a href="../contact.html">Επικοινωνία</a><button id="themeBtn" class="theme-btn">🌙</button></nav></div></header>
+<main class="article-page"><div class="article-content"><a class="back" href="../index.html#articles">← Όλα τα άρθρα</a><span class="tag">Bash</span><h1>Bash Variables και βασική σύνταξη</h1><p class="lead">Ξεκίνα να γράφεις Bash scripts με μεταβλητές, arguments και exit codes.</p>
+<h2>Shebang</h2><p>Ένα script συνήθως ξεκινά με shebang που δηλώνει τον interpreter.</p><pre>#!/bin/bash
+
+echo &quot;Hello Linux&quot;</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Κάνε το αρχείο executable με chmod.</p><h2>Variables</h2><p>Ανάθεσε τιμή χωρίς κενά γύρω από το =.</p><pre>NAME=&quot;Linux&quot;
+echo &quot;Hello $NAME&quot;</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Χρησιμοποίησε quotes όταν η τιμή μπορεί να περιέχει spaces.</p><h2>Arguments</h2><p>Τα <code>$1</code>, <code>$2</code> είναι arguments που δόθηκαν στο script.</p><pre>#!/bin/bash
+echo &quot;Πρώτο argument: $1&quot;
+
+# ./script.sh backup</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Το <code>$#</code> δείχνει πόσα arguments δόθηκαν.</p><h2>Exit code</h2><p>Το <code>$?</code> δείχνει τον κωδικό εξόδου της τελευταίας εντολής.</p><pre>mkdir /tmp/test
+ echo $?
+</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Συνήθως 0 σημαίνει επιτυχία, ενώ μη μηδενική τιμή δηλώνει σφάλμα.</p><h2>Καλή πρακτική</h2><p>Χρησιμοποίησε <code>set -euo pipefail</code> σε scripts όπου ταιριάζει και έλεγχε τις κρίσιμες εντολές.</p><pre>#!/bin/bash
+set -euo pipefail</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Δοκίμαζε πάντα scripts πρώτα σε test directory.</p><h2>Πρακτική άσκηση</h2><p>Δοκίμασε τις εντολές σε ένα test Linux σύστημα. Κατέγραψε τι άλλαξε πριν και μετά και κράτησε τις εντολές που αποδείχθηκαν χρήσιμες.</p>
+<h2>Συνηθισμένα λάθη</h2><ul><li>Εκτέλεση εντολών με <code>sudo</code> χωρίς έλεγχο.</li><li>Χρήση paths χωρίς να επιβεβαιωθεί ο προορισμός.</li><li>Αλλαγή ρυθμίσεων χωρίς backup ή τρόπο επαναφοράς.</li></ul>
+<h2>Checklist</h2><ol><li>Διάβασε την εντολή πριν την εκτελέσεις.</li><li>Έλεγξε το αποτέλεσμα.</li><li>Αν κάτι αποτύχει, δες logs και status.</li><li>Τεκμηρίωσε τη λύση.</li></ol></div></main><footer><div class="container copyright">© 2026 Linux στην Πράξη · Linux, Bash & System Administration</div></footer><script src="../js/main.js"></script></body></html>

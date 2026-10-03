@@ -1,0 +1,17 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ένας ασφαλής οδηγός για να στήσεις το πρώτο σου Ubuntu Server σε φυσικό ή εικονικό μηχάνημα."><title>Εγκατάσταση Ubuntu Server βήμα-βήμα | Linux στην Πράξη</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><header class="site-header"><div class="container nav"><a class="logo" href="../index.html">🐧 Linux στην Πράξη</a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav"><a href="../index.html">Αρχική</a><a href="../index.html#categories">Κατηγορίες</a><a href="../index.html#articles">Άρθρα</a><a href="../about.html">Σχετικά</a><a href="../contact.html">Επικοινωνία</a><button id="themeBtn" class="theme-btn">🌙</button></nav></div></header>
+<main class="article-page"><div class="article-content"><a class="back" href="../index.html#articles">← Όλα τα άρθρα</a><span class="tag">Linux Basics</span><h1>Εγκατάσταση Ubuntu Server βήμα-βήμα</h1><p class="lead">Ένας ασφαλής οδηγός για να στήσεις το πρώτο σου Ubuntu Server σε φυσικό ή εικονικό μηχάνημα.</p>
+<h2>1. Προετοιμασία</h2><p>Κατέβασε το επίσημο ISO της έκδοσης Ubuntu Server που θα χρησιμοποιήσεις και έλεγξε τις απαιτήσεις του μηχανήματος ή της VM.</p><pre># Παράδειγμα σε VM
+# 2 CPU cores
+# 4 GB RAM
+# 25+ GB disk</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Για production εγκατάσταση, σχεδίασε storage, backups και networking πριν ξεκινήσεις.</p><h2>2. Δίκτυο</h2><p>Κατά την εγκατάσταση επίλεξε σωστό interface και, όπου χρειάζεται, στατική IP σύμφωνα με το δίκτυό σου.</p><pre>ip addr
+ip route</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Μετά την εγκατάσταση επιβεβαίωσε IP, gateway και DNS.</p><h2>3. Χρήστης</h2><p>Δημιούργησε έναν κανονικό χρήστη και χρησιμοποίησε sudo αντί να δουλεύεις συνεχώς ως root.</p><pre>whoami
+id</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Ο κανονικός χρήστης με sudo είναι ασφαλέστερη καθημερινή πρακτική.</p><h2>4. Ενημέρωση</h2><p>Μετά το πρώτο boot, κάνε update και upgrade.</p><pre>sudo apt update
+sudo apt upgrade</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Αν υπάρχουν kernel updates, μπορεί να χρειαστεί reboot.</p><h2>5. SSH</h2><p>Εγκατάστησε OpenSSH Server όταν χρειάζεσαι απομακρυσμένη διαχείριση.</p><pre>sudo apt install openssh-server
+sudo systemctl status ssh</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Πριν κλείσεις την τοπική κονσόλα, επιβεβαίωσε ότι μπορείς να συνδεθείς μέσω SSH.</p><h2>6. Βασικός έλεγχος</h2><p>Έλεγξε hostname, IP, disk και memory.</p><pre>hostnamectl
+ip addr
+df -h
+free -h</pre><p class="tip"><strong>💡 Τι περιμένουμε:</strong> Κράτησε αυτές τις εντολές ως πρώτο checklist μετά την εγκατάσταση.</p><h2>Πρακτική άσκηση</h2><p>Δοκίμασε τις εντολές σε ένα test Linux σύστημα. Κατέγραψε τι άλλαξε πριν και μετά και κράτησε τις εντολές που αποδείχθηκαν χρήσιμες.</p>
+<h2>Συνηθισμένα λάθη</h2><ul><li>Εκτέλεση εντολών με <code>sudo</code> χωρίς έλεγχο.</li><li>Χρήση paths χωρίς να επιβεβαιωθεί ο προορισμός.</li><li>Αλλαγή ρυθμίσεων χωρίς backup ή τρόπο επαναφοράς.</li></ul>
+<h2>Checklist</h2><ol><li>Διάβασε την εντολή πριν την εκτελέσεις.</li><li>Έλεγξε το αποτέλεσμα.</li><li>Αν κάτι αποτύχει, δες logs και status.</li><li>Τεκμηρίωσε τη λύση.</li></ol></div></main><footer><div class="container copyright">© 2026 Linux στην Πράξη · Linux, Bash & System Administration</div></footer><script src="../js/main.js"></script></body></html>
